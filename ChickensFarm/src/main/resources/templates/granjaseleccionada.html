@@ -122,10 +122,16 @@
 		<div class="row">
     		<div class="col-6 col-sm-3"><a class=" btn btn-primary" th:href="@{/comprarHuevos/} + ${granjaSelec.idGranja}" role="button">Comprar Huevos</a></div>
     		<div class="col-6 col-sm-3"><a class=" btn btn-primary" th:href="@{/comprarGallinas/} + ${granjaSelec.idGranja}" role="button">Comprar Gallinas</a></div>
-    		<!-- Force next columns to break to new line -->
+    		<!-- Próxima col en nueva línea -->
     		<div class="w-100"><br></div>
     		<div class="col-6 col-sm-3"><a class="btn btn-warning" th:href="@{/venderHuevos/} + ${granjaSelec.idGranja}" role="button">Vender Huevos</a></div>
     		<div class="col-6 col-sm-3"><a class="btn btn-warning" th:href="@{/venderGallinas/} + ${granjaSelec.idGranja}" role="button">Vender Gallinas</a></div>
+    		<div class="container">
+				<a class="nav-link" th:href="@{__${#httpServletRequest.requestURI}__(format=pdf)}"
+					title="Exportar a PDF" target="_blank">
+						<img class="img-responsive center-box" th:src="@{/images/PdfIcon.png}" height="auto">
+				</a>
+			</div>
     		<div class="col-6 col-sm-3">&nbsp; <a class=" btn btn-secondary" th:href="@{/index}" role="button">Salir</a></div>
   		</div>
   		
